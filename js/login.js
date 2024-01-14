@@ -42,7 +42,7 @@ const responseData = (result) => {
             text: "Selamat Datang di Keekonseling",
         }).then(() => {
             // Redirect to the dashboard page
-            window.location.href = " ./dashboard.html";
+            window.location.href = "http://127.0.0.1:5500/fitur/dashboard.html";
         });
     } else {
         // Use SweetAlert for error message
