@@ -24,7 +24,7 @@ const PostSignIn = () => {
   const target_url =
     "https://asia-southeast2-global-student-401904.cloudfunctions.net/pasetolog";
   const datainjson = {
-    email: getValue("username"),
+    username: getValue("username"),
     password: getValue("password"),
   };
 
