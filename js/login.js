@@ -1,5 +1,6 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/+esm';
 
 function postWithToken(target_url, datajson, responseFunction) {
   var myHeaders = new Headers();
@@ -15,17 +16,19 @@ function postWithToken(target_url, datajson, responseFunction) {
   };
 
   fetch(target_url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => responseFunction(JSON.parse(result)))
+    .then((response) => response.json())
+    .then((result) => responseFunction(result))
     .catch((error) => console.log("error", error));
 }
 
 const PostSignIn = () => {
+    const usernameEl = document.querySelector('#username');
+    const passwordEl = document.querySelector('#password')
   const target_url =
     "https://asia-southeast2-global-student-401904.cloudfunctions.net/pasetolog";
   const datainjson = {
-    username: getValue("username"),
-    password: getValue("password"),
+    username: usernameEl.value,
+    password: passwordEl.value,
   };
 
   postWithToken(target_url, datainjson, responseData);
@@ -42,7 +45,7 @@ const responseData = (result) => {
             text: "Selamat Datang di Keekonseling",
         }).then(() => {
             // Redirect to the dashboard page
-            window.location.href = "http://127.0.0.1:5500/fitur/dashboard.html";
+            window.location.href = "../fitur/dashboard.html";
         });
     } else {
         // Use SweetAlert for error message
