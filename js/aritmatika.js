@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("quiz-form");
     const resultDiv = document.getElementById("result");
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", (event) => {
         event.preventDefault();
 
         const answers = [4, 2, 24]; // Jawaban dari pertanyaan

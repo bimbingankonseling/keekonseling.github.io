@@ -2,17 +2,12 @@ const canvas = document.getElementById('drawingCanvas');
 const ctx = canvas.getContext('2d');
 let isDrawing = false;
 
-canvas.addEventListener('mousedown', startDrawing);
-canvas.addEventListener('mousemove', draw);
-canvas.addEventListener('mouseup', endDrawing);
-canvas.addEventListener('mouseout', endDrawing);
-
-function startDrawing(e) {
+const startDrawing = (e) => {
   isDrawing = true;
   draw(e);
 }
 
-function draw(e) {
+const draw = (e) => {
   if (!isDrawing) return;
   ctx.lineWidth = 4;
   ctx.lineCap = 'round';
@@ -23,7 +18,12 @@ function draw(e) {
   ctx.moveTo(e.offsetX, e.offsetY);
 }
 
-function endDrawing() {
+const endDrawing = () => {
   isDrawing = false;
   ctx.beginPath();
 }
+
+canvas.addEventListener('mousedown', startDrawing);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', endDrawing);
+canvas.addEventListener('mouseout', endDrawing);

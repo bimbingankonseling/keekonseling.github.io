@@ -80,7 +80,7 @@ const userMessage = [
   
   const synth = window.speechSynthesis;
   
-  function voiceControl(string) {
+  const voiceControl = (string) => {
     let u = new SpeechSynthesisUtterance(string);
     u.text = string;
     u.lang = "en-aus";
@@ -90,7 +90,7 @@ const userMessage = [
     synth.speak(u);
   }
   
-  function sendMessage() {
+  const sendMessage = () => {
     const inputField = document.getElementById("input");
     let input = inputField.value.trim();
     input != "" && output(input);
@@ -98,7 +98,7 @@ const userMessage = [
   }
   document.addEventListener("DOMContentLoaded", () => {
     const inputField = document.getElementById("input");
-    inputField.addEventListener("keydown", function (e) {
+    inputField.addEventListener("keydown", (e) => {
       if (e.code === "Enter") {
         let input = inputField.value.trim();
         input != "" && output(input);
@@ -107,7 +107,7 @@ const userMessage = [
     });
   });
   
-  function output(input) {
+  const output = (input) => {
     let product;
   
     let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
@@ -129,7 +129,7 @@ const userMessage = [
     addChat(input, product);
   }
   
-  function compare(triggerArray, replyArray, string) {
+  const compare = (triggerArray, replyArray, string) => {
     let item;
     for (let x = 0; x < triggerArray.length; x++) {
       for (let y = 0; y < replyArray.length; y++) {
@@ -144,7 +144,7 @@ const userMessage = [
     else return containMessageCheck(string);
   }
   
-  function containMessageCheck(string) {
+  const containMessageCheck = (string) => {
     let expectedReply = [
       [
         "Good Bye, dude",
@@ -172,20 +172,20 @@ const userMessage = [
     }
     return item;
   }
-  function addChat(input, product) {
+  const addChat = (input, product) => {
     const mainDiv = document.getElementById("message-section");
-    let userDiv = document.createElement("div");
+    const userDiv = document.createElement("div");
     userDiv.id = "user";
     userDiv.classList.add("message");
     userDiv.innerHTML = `<span id="user-response">${input}</span>`;
     mainDiv.appendChild(userDiv);
   
-    let botDiv = document.createElement("div");
+    const botDiv = document.createElement("div");
     botDiv.id = "bot";
     botDiv.classList.add("message");
     botDiv.innerHTML = `<span id="bot-response">${product}</span>`;
     mainDiv.appendChild(botDiv);
-    var scroll = document.getElementById("message-section");
+    const scroll = document.getElementById("message-section");
     scroll.scrollTop = scroll.scrollHeight;
     voiceControl(product);
   }
