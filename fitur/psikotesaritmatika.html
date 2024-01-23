@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Tes Online</title>
+  <title>Data Aritmatika</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- ** CSS Plugins Needed for the Project ** -->
@@ -42,7 +42,7 @@
               <a class="nav-link text-dark" href="./tesonline.html">Tes Online</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="./forumdiskusi.html">Forum Diskusi</a>
+              <a class="nav-link text-dark" href="./chat.html">Forum Diskusi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="./konselor.html">Konselor</a>
@@ -54,54 +54,51 @@
   </header>
   <!-- /header -->
 
+  <!-- details page -->
   <section class="single section-sm pb-0">
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-lg-12">
-          <div class="p-lg-5 p-4 bg-white">
-            <h2 class="mb-5">TES PSIKOTES ARITMATIKA</h2>
-            <h4>Selamat Datang Di Tes Psikotes Aritmatika</h4>
-
-          <form id="quiz-form">
-              <div class="question">
-                  <p>(1) 2 + 5 = ?</p>
-                  <input type="text" name="q1" required>
+    <section class="py-4 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="pt-5 bg-neutral-50 border border-neutral-100 rounded-xl">
+            <div class="px-6">
+              <h3 class="font-heading pb-8 text-lg text-neutral-600 font-semibold"><center>HASIL TES PSIKOTES ARITMATIKA</center></h3>
+              <br>
+              <br>
+              <div class="w-full overflow-x-auto">
+                <table class="w-full min-w-max">
+                  <thead>
+                    <tr class="text-left">
+                      <th class="p-0 border-b border-neutral-100">
+                        <div class="pb-3.5"><a class="text-sm text-gray-400 font-medium" href="#">No</a></div>
+                      </th>
+                      <th class="p-0 border-b border-neutral-100">
+                        <div class="pb-3.5"><a class="text-sm text-gray-400 font-medium" href="#">Nama</a></div>
+                      </th>
+                      <th class="p-0 border-b border-neutral-100">
+                        <div class="pb-3.5"><a class="text-sm text-gray-400 font-medium" href="#">Score</a></div>
+                      </th>
+                      <th class="p-0 border-b border-neutral-100">
+                        <div class="pb-3.5"><a class="text-sm text-gray-400 font-medium" href="#">Action</a></div></div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="list-reservasi">
+                
+                  </tbody>
+                </table>
               </div>
-              <div class="question">
-                  <p>2. 5 - 3 = ?</p>
-                  <input type="text" name="q2" required>
-              </div>
-              <div class="question">
-                  <p>3. 4 * 9 = ?</p>
-                  <input type="text" name="q3" required>
-              </div>
-              <div class="question">
-                <p>4. 2 * 5 = ?</p>
-                <input type="text" name="q1" required>
+              <br>
+              <a href="./formaritmatika.html" class="btn btn-primary">-- Tambah Data</a>
+              <br><br>
             </div>
-            <div class="question">
-              <p>5. 6 + 2 = ?</p>
-              <input type="text" name="q1" required>
           </div>
-          <div class="question">
-            <p>6. 4 * 3 = ?</p>
-            <input type="text" name="q1" required>
         </div>
-        <div class="question">
-          <p>7. 9 - 2 = ?</p>
-          <input type="text" name="q1" required>
-      </div>
-        <div class="question">
-        <p>8. 9 - 5 = ?</p>
-        <input type="text" name="q1" required>
-      </div>
-              <input type="submit" value="Submit">
-          </form>
-          <div id="result"></div>
-      </div>
+      </section>
+  </section>
+  <br><br>
+  <!-- /details page -->
   
       <script type="module" src="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/js/aritmatika.js"></script>
+      <script type="module" src="../js/list-aritmatika.js"></script>
   
 </body>
 

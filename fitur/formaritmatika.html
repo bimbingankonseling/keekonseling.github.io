@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Tes Online</title>
+  <title>Psikotes Aritmatika</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- ** CSS Plugins Needed for the Project ** -->
@@ -17,7 +17,8 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
   <!-- Main Stylesheet -->
-  <link href="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/css/gambar.css" rel="stylesheet" media="screen" />
+  <link href="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/assets/style.css" rel="stylesheet" media="screen" />
+  
 </head>
 
 <body>
@@ -54,12 +55,55 @@
   </header>
   <!-- /header -->
 
+  <!-- details page -->
+  <section class="single section-sm pb-0">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-12">
+          <div class="p-lg-5 p-4 bg-white">
+            <h2 class="mb-5">Psikotes Aritmatika</h2>
+            <h6>Tambahkan hasil test data pasien untuk disimpan!</h6>
 
-    <div class="canvas-container">
-      <canvas id="drawingCanvas" width="500" height="500"></canvas>
-    </div>  
-    <script type="module" src="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/js/gambar.js"></script>
+            <br>
+            
+            <br><br>
 
+            <div class="form-group">
+              <label for="status">Nama Pasien</label>
+              <input type="text" id="name" class="form-control" placeholder="nama pasien">
+            </div>
+<br>
+            <div class="form-group">
+                <label for="status">Score Test</label>
+                <input type="text" id="score" class="form-control" placeholder="score">
+            </div>
+            
+            
+            
+      </div>
+      <br>
+      <center>
+
+        <button onclick="doBuatJanji()" class="btn btn-primary">Tambahkan Data</button>
+      </center>
+    </div>
+  </section>
+  <br><br>
+  <!-- /details page -->
+
+  
+
+  <!-- ** JS Plugins Needed for the Project ** -->
+  <!-- jquiry -->
+  <script src="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/plugins/jquery/jquery-1.12.4.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- match-height JS -->
+  <script src="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/plugins/match-height/jquery.matchHeight-min.js"></script>
+  <!-- Main Script -->
+  <script src="https://cdn.jsdelivr.net/gh/bimbingankonseling/keekonseling.github.io/assets/script.js"></script>
+  <script type="module" src="../js/aritmatika.js"></script>
 </body>
 
 </html>
